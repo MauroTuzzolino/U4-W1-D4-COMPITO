@@ -1,14 +1,14 @@
 package EXERCISE;
 
-public class Dipendente {
+public abstract class Dipendente {
 
     private int matricola;
-    private double stipendio;
+    //private double stipendio;
     private Dipartimento dipartimento;
 
-    public Dipendente(int matricola, double stipendio, Dipartimento dipartimento) {
+    public Dipendente(int matricola, /*double stipendio,*/ Dipartimento dipartimento) {
         this.matricola = matricola;
-        this.stipendio = stipendio;
+        //this.stipendio = stipendio;
         this.dipartimento = dipartimento;
     }
 
@@ -16,11 +16,13 @@ public class Dipendente {
         return matricola;
     }
 
-    public double getStipendio() {
-        return stipendio;
-    }
+//    public double getStipendio() {
+//        return stipendio;
+//    }
 
     public Dipartimento getDipartimento() {
         return dipartimento;
     }
+
+    public abstract double calculateSalary();
 }
