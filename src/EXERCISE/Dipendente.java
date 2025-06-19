@@ -1,6 +1,6 @@
 package EXERCISE;
 
-public abstract class Dipendente {
+public abstract class Dipendente implements WorkStart {
 
     private int matricola;
     //private double stipendio;
@@ -25,4 +25,9 @@ public abstract class Dipendente {
     }
 
     public abstract double calculateSalary();
+
+    @Override
+    public void checkIn() {
+        System.out.println("Dipendente con matricola " + matricola + " ha iniziato il turno.");
+    }
 }

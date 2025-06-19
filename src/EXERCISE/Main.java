@@ -15,6 +15,7 @@ public class Main {
         }
         */
 
+        /* PARTE 2
         Dipendente fullTime = new DipendeteFullTime(1, 2000, Dipartimento.VENDITE);
         Dipendente partTime = new DipendentePartTime(15.5, 80, 2, Dipartimento.PRODUZIONE);
         Dipendente dirigente = new Dirigente(3, Dipartimento.AMMISTRAZIONE, 3000, 800);
@@ -25,6 +26,18 @@ public class Main {
             System.out.println("Matricola: " + arrayDipendenti[i].getMatricola() +
                     ", Dipartimento: " + arrayDipendenti[i].getDipartimento() +
                     ", Paga Mensile: " + arrayDipendenti[i].calculateSalary());
+        }
+        */
+
+        WorkStart w1 = new Volontario("Luca", 25, "CV_Luca.pdf");
+        WorkStart w2 = new Volontario("Franco", 30, "CV_Franco.pdf");
+        WorkStart w3 = new DipendentePartTime(25.5, 80, 2, Dipartimento.PRODUZIONE);
+        WorkStart w4 = new DipendeteFullTime(1002, 30000, Dipartimento.VENDITE);
+
+        WorkStart[] workers = {w1, w2, w3, w4};
+
+        for (WorkStart worker : workers) {
+            worker.checkIn();
         }
     }
 }
